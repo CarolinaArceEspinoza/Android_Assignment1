@@ -29,9 +29,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // navigate to the sign up 2 page:
+        binding.btnSignUp2.setOnClickListener {
+            // set an order to the sign up page to open (intent). To do it first we create the intent then send
+            val intent = Intent(this,SignUp2::class.java)
+            startActivity(intent)
+        }
+
         // navigate to the login page
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+        }
+
+        // navigate to the login 2 page
+        binding.btnLogin2.setOnClickListener {
+            val intent = Intent(this, Login2::class.java)
             startActivity(intent)
         }
 
