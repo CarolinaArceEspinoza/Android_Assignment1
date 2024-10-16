@@ -1,17 +1,17 @@
 package com.example.activityweek6
 
+import android.content.Intent
+import android.content.SharedPreferences
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.activityweek6.databinding.ActivityMainBinding
-import android.content.Intent  // for messages
-import android.widget.Toast // error messages or notifications
-import android.content.SharedPreferences // allow me to access to my storage
-import android.net.Uri
 import com.example.activityweek6.databinding.ActivityLoginBinding
-import com.example.activityweek6.databinding.ActivitySignUpBinding
 
 class Login : AppCompatActivity() {
 
@@ -45,7 +45,9 @@ class Login : AppCompatActivity() {
                     startActivity(intent)
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "Credentials invalid, try again", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Username or password is incorrect. Try again!", Toast.LENGTH_SHORT,)
+                    .show()
+
                 }
 
 

@@ -45,7 +45,7 @@ class Login2 : AppCompatActivity() {
                     startActivity(intent)
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "Credentials invalid, try again", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Username or password is incorrect. Try again!", Toast.LENGTH_SHORT).show()
                 }
 
 

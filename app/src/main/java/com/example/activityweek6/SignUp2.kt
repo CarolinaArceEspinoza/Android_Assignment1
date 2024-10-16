@@ -33,7 +33,7 @@ class SignUp2 : AppCompatActivity() {
             if (password != confirmPassword){
                 Toast.makeText(this, "Password do not match", Toast.LENGTH_SHORT).show()
             } else if (!password.matches(passwordPattern)){
-                Toast.makeText(this, "password debe contener x", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Password needs 8 to 15 characters, 1 capital letter, 1 special character", Toast.LENGTH_LONG).show()
             } else if (!email.matches(emailPattern)){
                 Toast.makeText(this, "E-mail incorrect", Toast.LENGTH_SHORT).show()
             } else {
