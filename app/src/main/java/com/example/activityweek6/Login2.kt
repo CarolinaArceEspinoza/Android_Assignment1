@@ -15,42 +15,48 @@ import com.example.activityweek6.databinding.ActivitySignUp2Binding
 
 class Login2 : AppCompatActivity() {
 
-    //Declare Binding Var (object)
+    // Declare a variable to hold the view binding object.
+    // The binding object allows access to all the views in the layout.
     private lateinit var binding: ActivityLogin2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        //initial  values for the created binding object:
+        // Initialize the binding object. It inflates (creates) the layout views and binds them to this activity.
         binding = ActivityLogin2Binding.inflate(layoutInflater) //access to my components
-        setContentView(binding.root)
+        setContentView(binding.root) // Set the activity's content to the layout bound by the binding object.
 
-        // Set up the Login button click listener
+        // Set up the action for the "Login" button when it's clicked.
         binding.btnLogin.setOnClickListener {
+            // Get the text entered in the email and password fields.
             val username = binding.txtEmail.text.toString()
             val password = binding.txtPassword.text.toString()
-            val updatesUrl = "https://github.blog/changelog/"
+            val updatesUrl = "https://github.blog/changelog/" // Placeholder URL for updates.
 
 
-            // Placeholder: Check if email and password are correct (you can add actual logic here)
+            // Check if both email and password are not empty.
             if (username.isNotEmpty() && password.isNotEmpty()) {
+                // Access SharedPreferences to validate the stored email and password.
                 val sharedPreferences: SharedPreferences = getSharedPreferences("UserPref", MODE_PRIVATE)
-                val usernameValidation = sharedPreferences.all.get("EMAIL")
-                val passwordValidation = sharedPreferences.all.get("PASSWORD")
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(updatesUrl))
+                val usernameValidation = sharedPreferences.all.get("EMAIL") // Retrieve the saved email.
+                val passwordValidation = sharedPreferences.all.get("PASSWORD") // Retrieve the saved password.
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(updatesUrl)) // Create an Intent to open a web page (the updates URL).
 
+                // Check if the entered email and password match the stored values.
                 if (username == usernameValidation && password == passwordValidation ) {
-                    // start the activity created in the previous line
-                    startActivity(intent)
+                    // If valid, open the web page and show a success message.
+                    startActivity(intent) // Open the URL in a browser.
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                 } else {
+                    // If invalid, show an error message.
                     Toast.makeText(this, "Username or password is incorrect. Try again!", Toast.LENGTH_SHORT).show()
                 }
 
 
 
             } else {
+                // If either field is empty, show a message asking the user to enter both.
                 Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
             }
 
@@ -62,15 +68,19 @@ class Login2 : AppCompatActivity() {
 
 
 
-        // go back to the main page using the back button
+        // Set up the action for the "Back to Main" button when it's clicked.
         binding.btnBackToMain.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val intent = Intent(this, MainActivity::class.java) // Create an Intent to navigate back to the main activity.
+            startActivity(intent) // Start the MainActivity.
         }
+        // This is used to handle the display of system bars (like status and navigation bars)
+        // and apply appropriate padding to the layout to prevent overlap.
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            // Get the dimensions of system bars (top, bottom, left, right).
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            // Apply padding to the view to ensure it doesn't overlap with system bars.
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+            insets // Return the insets after applying them.
         }
     }
 }
