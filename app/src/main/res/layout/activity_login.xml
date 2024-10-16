@@ -7,22 +7,20 @@
     android:layout_height="match_parent"
     android:background="@drawable/background2"
     tools:context=".Login">
-
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:fontFamily="@font/googlefont"
         android:text="Login"
         android:textColor="@color/white"
         android:textFontWeight="900"
         android:textSize="65sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tvSubTitle"
         android:layout_width="wrap_content"
@@ -36,8 +34,6 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@+id/txtTitle"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
-
-
     <EditText
         android:id="@+id/txtUsername"
         style="@style/textField"
@@ -55,7 +51,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
         app:layout_constraintVertical_bias="0.072" />
-
     <EditText
         android:id="@+id/txtPassword"
         style="@style/textField"
@@ -70,7 +65,6 @@
         app:backgroundTint="#C2FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/txtUsername"
         app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
-
     <Button
         android:id="@+id/btnBackToMain"
         style="@style/buttonBack"
@@ -93,7 +87,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword"
         app:layout_constraintVertical_bias="0.887" />
-
     <Button
         android:id="@+id/btnLogin"
         style="@style/buttonLogin"
@@ -106,6 +99,5 @@
         app:layout_constraintStart_toStartOf="@+id/txtPassword"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword"
         app:layout_constraintVertical_bias="0.066" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

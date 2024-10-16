@@ -1,5 +1,4 @@
 package com.example.activityweek6
-
 import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
@@ -10,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.activityweek6.databinding.ActivityLogin2Binding
-import com.example.activityweek6.databinding.ActivityLoginBinding
-import com.example.activityweek6.databinding.ActivitySignUp2Binding
 
 class Login2 : AppCompatActivity() {
 
@@ -53,14 +50,10 @@ class Login2 : AppCompatActivity() {
                     Toast.makeText(this, "Username or password is incorrect. Try again!", Toast.LENGTH_SHORT).show()
                 }
 
-
-
             } else {
                 // If either field is empty, show a message asking the user to enter both.
                 Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
             }
-
-
         }
 
 

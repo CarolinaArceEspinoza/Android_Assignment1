@@ -10,19 +10,18 @@
 
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:fontFamily="@font/googlefont"
         android:text="Sign Up"
         android:textColor="@color/white"
         android:textFontWeight="900"
         android:textSize="65sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSubTitle"
@@ -37,7 +36,6 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@+id/txtTitle"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
-
     <Button
         android:id="@+id/btnBackToMain"
         style="@style/buttonBack"
@@ -60,7 +58,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtConfirmPassword"
         app:layout_constraintVertical_bias="0.887" />
-
     <Button
         android:id="@+id/btnCreateAccount"
         style="@style/buttonLogin"
@@ -74,13 +71,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtConfirmPassword"
         app:layout_constraintVertical_bias="0.033" />
-
     <EditText
         android:id="@+id/txtUsername"
         style="@style/textField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="588dp"
         android:drawableLeft="@drawable/ic_user"
         android:hint="User Name"
         android:inputType="text"
@@ -88,8 +83,11 @@
         android:minHeight="48dp"
         app:backgroundTint="#C2FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txtPassword" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
+        app:layout_constraintVertical_bias="0.072" />
     <EditText
         android:id="@+id/txtPassword"
         style="@style/textField"
@@ -103,7 +101,6 @@
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="@+id/txtConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
-
     <EditText
         android:id="@+id/txtConfirmPassword"
         style="@style/textField"
@@ -117,6 +114,4 @@
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="@+id/btnCreateAccount"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

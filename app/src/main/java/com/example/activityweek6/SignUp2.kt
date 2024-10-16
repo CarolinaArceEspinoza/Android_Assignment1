@@ -1,5 +1,4 @@
 package com.example.activityweek6
-
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -64,13 +63,8 @@ class SignUp2 : AppCompatActivity() {
                 // Create an Intent to navigate to the Login2 activity after account creation.
                 val intent = Intent(this, Login2::class.java)
                 startActivity(intent)// Start the Login2 activity.
-
             }
-
-
-
         }
-
 
         // Set up the action for the "Back to Main" button when clicked.
         binding.btnBackToMain.setOnClickListener {
@@ -78,7 +72,6 @@ class SignUp2 : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)// Start the MainActivity.
         }
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
